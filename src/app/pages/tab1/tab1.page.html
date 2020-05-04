@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-segment mode="md" color="danger" value="delivery" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="delivery">
+        <ion-label>Delivery</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="shop">
+        <ion-label>Retirar Tienda</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button class="ion-padding ion-text-left" fill="clear" color="danger" expand="full" (click)="onClick()">
+    <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    Calle Carabobo, 345
+  </ion-button>
+  <ion-searchbar mode="ios" animated placeholder="Producto o tienda"></ion-searchbar>
+  <div class="slides">
+    <app-slides [data]="items"></app-slides>
+  </div>
+  <div *ngIf="active" class="ion-padding">
+    <ion-list>
+      <app-shop *ngFor="let shop of shops" [data]="shop"></app-shop>
+    </ion-list>
+  </div>
+  <div *ngIf="!active">
+    <app-shop></app-shop>
+  </div>
+</ion-content>

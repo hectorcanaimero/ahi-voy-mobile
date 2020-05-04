@@ -1,0 +1,19 @@
+ion-item {
+    --padding-start: 0px !important;
+    --padding-end: 0px !important;
+    --border-radius: 10px !important;
+    --border-style: solid !important;
+    --border-color: #efefef;
+}
+
+.title {
+    font-size: 16px !important;
+    color: #444444 !important;
+}
+
+.shop-item {
+    font-size: 13px !important;
+    .rating {
+        color: #d8ab17;
+    }
+}

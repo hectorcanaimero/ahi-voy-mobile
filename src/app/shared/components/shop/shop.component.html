@@ -1,0 +1,16 @@
+<ion-item>
+  <ion-avatar slot="start">
+    <img [src]="data.src" />
+  </ion-avatar>
+  <ion-label>
+    <p class="title">{{ data.name }}</p>
+    <div>
+      <span class="shop-item">
+        <ion-icon name="star" color="warning"></ion-icon>
+        <span class="rating">{{ data.rating }}</span>
+        <span class="category">{{ data.category }}</span>
+        <span class="distance">{{ data.distance }}km.</span>
+      </span>
+    </div>
+  </ion-label>
+</ion-item>

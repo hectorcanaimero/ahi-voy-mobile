@@ -1,0 +1,8 @@
+<ion-slides pager="true" [options]="slideOpts">
+  <ion-slide *ngFor="let item of data">
+    <div>
+      <img [src]="item.src">
+      <h5 class="title-slide">{{ item.name }}</h5>
+    </div>
+  </ion-slide>
+</ion-slides>
